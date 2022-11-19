@@ -1,26 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  /* Globals */
+  html,
   body {
-    color: white;
-    background: black;
+    @apply font-public-sans font-normal text-zinc-800 w-screen min-h-screen relative;
+  }
+  .btn {
+    @apply bg-gradient-to-l to-lime-green from-bright-cyan text-white font-bold py-3 px-6 rounded-full text-sm;
+  }
+  /* Navbar */
+  nav {
+    @apply w-full flex max-w-5xl mx-auto justify-between items-center p-4 lg:px-0;
+  }
+  nav ul {
+    @apply absolute top-12 lg:top-auto w-11/12 lg:w-auto bg-white text-center space-y-4 lg:space-y-0 py-4 lg:py-0 rounded-md lg:relative items-center lg:space-x-4;
+  }
+  nav ul li a {
+    @apply text-grayish-blue;
+  }
+  nav > a {
+    @apply hidden lg:block;
+  }
+  nav > button {
+    @apply block lg:hidden;
   }
 }
