@@ -19,6 +19,10 @@ module.exports = {
       fontFamily: {
         "public-sans": ["Public Sans", "sans-serif"],
       },
+      backgroundImage: {
+        "intro-desktop": "url('/bg-intro-desktop.svg')",
+        "intro-mobile": "url('/bg-intro-mobile.svg')",
+      },
     },
   },
   plugins: [],

@@ -6,25 +6,47 @@
   /* Globals */
   html,
   body {
-    @apply font-public-sans font-normal text-zinc-800 w-screen min-h-screen relative;
+    @apply font-public-sans font-normal text-zinc-800 w-screen min-h-screen relative overflow-x-hidden;
   }
   .btn {
-    @apply bg-gradient-to-l to-lime-green from-bright-cyan text-white font-bold py-3 px-6 rounded-full text-sm;
+    @apply bg-gradient-to-l to-lime-green from-bright-cyan text-white font-bold py-3 px-6 rounded-full text-sm hover:opacity-75 transition duration-200 ease-in-out;
+  }
+  .author {
+    @apply bg-neutral-800 text-white py-6 text-center text-xl font-bold;
+  }
+  .author a {
+    @apply text-blue-400 hover:text-green-400 underline;
   }
   /* Navbar */
-  nav {
-    @apply w-full flex max-w-5xl mx-auto justify-between items-center p-4 lg:px-0;
+  nav.navbar {
+    @apply w-full flex max-w-5xl mx-auto justify-between items-center p-4 lg:p-0;
   }
-  nav ul {
-    @apply absolute top-12 lg:top-auto w-11/12 lg:w-auto bg-white text-center space-y-4 lg:space-y-0 py-4 lg:py-0 rounded-md lg:relative items-center lg:space-x-4;
+  nav.navbar ul {
+    @apply absolute top-16 lg:top-auto w-11/12 lg:w-auto bg-white shadow-2xl lg:shadow-none text-center space-y-4 lg:space-y-0 py-4 lg:py-0 rounded-md lg:relative items-center lg:space-x-4 z-50;
   }
-  nav ul li a {
-    @apply text-grayish-blue;
+  nav.navbar ul li {
+    @apply relative h-full lg:py-6;
   }
-  nav > a {
+  nav.navbar ul li a {
+    @apply text-grayish-blue hover:text-dark-blue h-full block after:content-[''] after:hidden after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-l after:to-lime-green after:from-bright-cyan after:transition-all after:duration-200 after:ease-in-out hover:after:block;
+  }
+  nav.navbar > a.btn {
     @apply hidden lg:block;
   }
-  nav > button {
+  nav.navbar > button {
     @apply block lg:hidden;
+  }
+  /* Hero */
+  .hero {
+    @apply bg-light-grayish-blue relative w-full bg-no-repeat bg-cover bg-right-top bg-intro-mobile lg:bg-intro-desktop overflow-hidden px-4 lg:px-0;
+  }
+  .hero__container {
+    @apply max-w-5xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center;
+  }
+  .hero__content {
+    @apply w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center text-center lg:text-left space-y-4 lg:space-y-8;
+  }
+  .hero__container img {
+    @apply lg:w-1/2 w-full h-full;
   }
 }

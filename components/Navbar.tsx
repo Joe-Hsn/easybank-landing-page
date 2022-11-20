@@ -9,12 +9,21 @@ const links: string[] = ["Home", "About", "Contact", "Blog", "Careers"];
 export default function Navbar({}: Props) {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav>
-      <Image src="/logo.svg" alt="Logo" width={140} height={20} priority />
+    <nav className="navbar">
+      <Link href="/">
+        <Image src="/logo.svg" alt="Logo" width={140} height={20} priority />
+      </Link>
       <ul className={!toggle ? "hidden lg:flex" : "block lg:flex"}>
         {links.map((link, index) => (
           <li key={index}>
-            <Link href={link.toLowerCase()}>{link}</Link>
+            <Link
+              href={`#${link.toLowerCase()}`}
+              onClick={() => {
+                setToggle(false);
+              }}
+            >
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
