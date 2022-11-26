@@ -32,7 +32,9 @@ export default function Choose({}: Props) {
         <h2>Why choose Easybank?</h2>
         <p>
           We leverage Open Banking to turn your bank account into your financial
-          hub. Control your finances like never before.
+          hub.
+          <br className="hidden md:block" />
+          Control your finances like never before.
         </p>
         <div className="choose__blocks">
           {chooseBlocks.map((block, index) => {

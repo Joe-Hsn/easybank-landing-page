@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import Articles from "../components/Articles";
 import Choose from "../components/Choose";
 import Footer from "../components/Footer";
@@ -26,7 +27,7 @@ export default function Home() {
         <Footer />
         <div className="author">
           Coded by{" "}
-          <a href="https://linktr.ee/joe_hsn" target="_blank" rel="noreferrer">
+          <a href="https://linktr.ee/joehsn" target="_blank" rel="noreferrer">
             @joehsn
           </a>
           .
