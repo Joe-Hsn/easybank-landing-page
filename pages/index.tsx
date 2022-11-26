@@ -26,11 +26,14 @@ export default function Home() {
         <Articles />
         <Footer />
         <div className="author">
-          Coded by{" "}
-          <a href="https://linktr.ee/joehsn" target="_blank" rel="noreferrer">
-            @joehsn
-          </a>
-          .
+          <span>
+            Coded with ❤️ by{" "}
+            <a href="https://linktr.ee/joehsn" target="_blank" rel="noreferrer">
+              @joehsn
+            </a>
+            .
+          </span>
+          <button>Dark mode</button>
         </div>
       </main>
     </>

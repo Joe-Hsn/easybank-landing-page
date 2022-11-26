@@ -9,14 +9,24 @@
     @apply box-border bg-white dark:bg-zinc-700 font-public-sans font-normal text-zinc-800 w-full min-h-screen relative overflow-x-hidden;
   }
   .btn {
-    @apply bg-gradient-to-l to-lime-green from-bright-cyan text-white font-bold py-3 px-6 rounded-full text-sm hover:opacity-75 transition duration-200 ease-in-out;
+    @apply bg-gradient-to-l to-lime-green from-bright-cyan text-white font-bold py-3 px-6 rounded-full text-sm filter hover:brightness-200 transition duration-200 ease-in-out;
   }
   .author {
+    @apply w-full flex flex-col sm:flex-row items-center justify-evenly bg-slate-800 text-white px-4 space-y-4 sm:space-y-0 py-6;
+  }
+  .author a {
+    @apply text-blue-400 hover:text-green-400 hover:underline;
+  }
+  .author button {
+    @apply bg-slate-800 text-white border border-white border-solid py-2 px-4 rounded hover:bg-white hover:text-slate-800 transition duration-200 ease-in-out;
+  }
+
+  /* .author {
     @apply bg-neutral-800 text-white py-6 text-center text-xl font-bold;
   }
   .author a {
-    @apply text-blue-400 hover:text-green-400 underline;
-  }
+    @apply text-blue-400 hover:text-green-400 hover:underline;
+  } */
   /* Navbar */
   nav.navbar {
     @apply w-full flex max-w-7xl mx-auto justify-between items-center p-4 lg:p-0;
@@ -66,7 +76,7 @@
     @apply mt-10 w-full flex flex-wrap  items-start justify-between space-y-4 lg:space-y-0;
   }
   .choose__block {
-    @apply w-full sm:w-[47.5%] xl:w-1/5  flex flex-col items-center md:items-start justify-center space-y-6;
+    @apply w-full sm:w-[47.5%] xl:w-1/5  flex flex-col items-center xl:items-start justify-center space-y-6;
   }
   .choose__block img {
     @apply w-16 h-16;
@@ -107,5 +117,43 @@
   }
   .articles__card__text p {
     @apply text-grayish-blue text-sm;
+  }
+  /* Footer */
+  footer {
+    @apply w-full bg-dark-blue text-white relative py-12 px-4;
+  }
+  .footer__container {
+    @apply max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start space-y-8 lg:space-y-0;
+  }
+  .block-1st {
+    @apply w-full lg:w-auto flex flex-col items-center lg:items-start justify-start space-y-6;
+  }
+  .block-1st .logo img {
+    @apply lg:w-40 filter brightness-[10];
+  }
+  .block-1st .social-icons {
+    @apply flex space-x-3;
+  }
+  .block-1st .social-icons a {
+    @apply hover:text-lime-green;
+  }
+  .block-1st .social-icons a,
+  .block-1st .social-icons img {
+    @apply w-6 h-6;
+  }
+  .block-2nd {
+    @apply w-full lg:w-1/2 flex flex-col lg:flex-row items-center lg:items-start justify-start space-y-2 lg:space-y-0 lg:space-x-[15%];
+  }
+  .block-2nd ul {
+    @apply w-full lg:w-auto text-center lg:text-start space-y-2;
+  }
+  .block-2nd ul li {
+    @apply hover:text-lime-green;
+  }
+  .block-3rd {
+    @apply w-full lg:w-auto flex flex-col items-center lg:items-end justify-center space-y-6;
+  }
+  .block-3rd span {
+    @apply text-grayish-blue;
   }
 }
