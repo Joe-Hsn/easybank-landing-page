@@ -10,7 +10,7 @@ export default function Navbar({}: Props) {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="navbar">
-      <Link href="/">
+      <Link href="/" className="logo">
         <Image src="/logo.svg" alt="Logo" width={140} height={20} priority />
       </Link>
       <ul className={!toggle ? "hidden lg:flex" : "block lg:flex"}>

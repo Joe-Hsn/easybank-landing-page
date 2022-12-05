@@ -6,7 +6,7 @@
   /* Globals */
   html,
   body {
-    @apply box-border bg-white dark:bg-zinc-700 font-public-sans font-normal text-zinc-800 w-full min-h-screen relative overflow-x-hidden;
+    @apply box-border bg-white dark:bg-slate-800 font-public-sans font-normal text-dark-blue dark:text-white w-full min-h-screen relative overflow-x-hidden;
   }
   img {
     @apply pointer-events-none;
@@ -20,21 +20,27 @@
   .author a {
     @apply text-blue-400 hover:text-green-400 hover:underline;
   }
-  .author button {
-    @apply bg-slate-800 text-white border border-white border-solid py-2 px-4 rounded hover:bg-white hover:text-slate-800 transition duration-200 ease-in-out;
+  .author select {
+    @apply cursor-pointer bg-slate-800 text-white border border-white border-solid py-2 px-4 rounded hover:bg-white hover:text-slate-800 transition duration-200 ease-in-out;
   }
   /* Navbar */
   nav.navbar {
-    @apply relative bg-white w-full flex max-w-7xl mx-auto justify-between items-center p-4 lg:p-0 z-20;
+    @apply relative bg-white dark:bg-slate-800 dark:text-white w-full flex max-w-7xl mx-auto justify-between items-center p-4 lg:p-0 z-20;
+  }
+  nav.navbar .logo img {
+    @apply dark:filter dark:brightness-[10];
   }
   nav.navbar ul {
-    @apply absolute top-16 right-1/2 translate-x-1/2 lg:right-auto lg:translate-x-0 lg:top-auto w-11/12 lg:w-auto bg-white shadow-2xl lg:shadow-none text-center space-y-4 lg:space-y-0 py-4 lg:py-0 rounded-md lg:relative items-center lg:space-x-4 z-50;
+    @apply absolute top-16 right-1/2 translate-x-1/2 lg:right-auto lg:translate-x-0 lg:top-auto w-11/12 lg:w-auto bg-white dark:bg-slate-800 shadow-2xl lg:shadow-none text-center space-y-4 lg:space-y-0 py-4 lg:py-0 rounded-md lg:relative items-center lg:space-x-4 z-50;
   }
   nav.navbar ul li {
     @apply relative h-full lg:py-6;
   }
   nav.navbar ul li a {
-    @apply text-grayish-blue hover:text-dark-blue h-full block after:content-[''] after:hidden after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-l after:to-lime-green after:from-bright-cyan after:transition-all after:duration-200 after:ease-in-out hover:after:block;
+    @apply text-grayish-blue hover:text-dark-blue dark:hover:text-white h-full block after:content-[''] after:hidden after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-l after:to-lime-green after:from-bright-cyan after:transition-all after:duration-200 after:ease-in-out hover:after:block;
+  }
+  nav.navbar .nav__toggler {
+    @apply dark:filter dark:brightness-[10];
   }
   nav.navbar > a.btn {
     @apply hidden lg:block;
@@ -44,7 +50,7 @@
   }
   /* Hero */
   .hero {
-    @apply bg-very-light-gray relative w-full bg-no-repeat bg-intro-mobile lg:bg-intro-desktop px-4 lg:py-20 pb-12 overflow-hidden lg:overflow-visible bg-contain;
+    @apply bg-very-light-gray dark:bg-slate-900 relative w-full bg-no-repeat bg-intro-mobile lg:bg-intro-desktop px-4 lg:py-20 pb-12 overflow-hidden lg:overflow-visible bg-contain;
     background-size: 100% 50%;
   }
   @media screen and (min-width: 640px) {
@@ -72,14 +78,14 @@
     @apply max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between;
   }
   .hero__content {
-    @apply w-full lg:w-[450px] text-dark-blue flex flex-col items-center lg:items-start text-center lg:text-left space-y-8;
+    @apply w-full lg:w-[450px] text-dark-blue dark:text-white flex flex-col items-center lg:items-start text-center lg:text-left space-y-8;
   }
   .hero__container img {
     @apply w-full lg:w-4/6 -mt-[35%] lg:-my-[20%] lg:-mr-[12.5%] z-10;
   }
   /* Choose section */
   .choose {
-    @apply bg-light-grayish-blue dark:bg-zinc-700 relative w-full px-4 lg:px-0;
+    @apply bg-light-grayish-blue dark:bg-slate-700 relative w-full px-4 lg:px-0;
   }
   .choose__container {
     @apply max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-start py-12 lg:py-24;
@@ -88,7 +94,7 @@
     @apply w-full text-3xl sm:text-4xl text-dark-blue dark:text-white mb-4 text-center xl:text-start;
   }
   .choose__container p {
-    @apply w-full text-grayish-blue dark:text-gray-400 text-center xl:text-start;
+    @apply w-full text-grayish-blue dark:text-slate-400 text-center xl:text-start;
   }
   .choose__blocks {
     @apply mt-10 w-full flex flex-wrap  items-start justify-between gap-4;
@@ -103,20 +109,20 @@
     @apply text-2xl text-dark-blue dark:text-white;
   }
   .choose__block p {
-    @apply text-grayish-blue dark:text-gray-400 text-center lg:text-start text-sm;
+    @apply text-grayish-blue dark:text-slate-400 text-center lg:text-start text-sm;
   }
   /* Articles */
   .articles {
-    @apply w-full bg-very-light-gray relative px-4 xl:px-0;
+    @apply w-full bg-very-light-gray dark:bg-slate-900 relative px-4 xl:px-0;
   }
   .articles__container {
     @apply max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-start py-12 lg:py-24 space-y-10;
   }
   .articles__container h2 {
-    @apply w-full text-3xl sm:text-4xl text-dark-blue;
+    @apply w-full text-3xl sm:text-4xl text-dark-blue dark:text-white;
   }
   .articles__card {
-    @apply bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[47.5%] xl:w-72 flex flex-col items-center justify-center;
+    @apply bg-white dark:bg-slate-800 shadow-lg rounded-lg overflow-hidden w-full sm:w-[47.5%] xl:w-72 flex flex-col items-center justify-center;
   }
   .articles__card:hover img {
     @apply transform scale-110 -translate-y-3 transition-all duration-500 ease-in-out;
@@ -131,7 +137,7 @@
     @apply text-xs w-full text-start text-grayish-blue;
   }
   .articles__card__text a {
-    @apply text-dark-blue hover:text-bright-cyan text-xl w-full;
+    @apply text-dark-blue dark:text-white hover:text-bright-cyan dark:hover:text-bright-cyan text-xl w-full;
   }
   .articles__card__text p {
     @apply text-grayish-blue text-sm;

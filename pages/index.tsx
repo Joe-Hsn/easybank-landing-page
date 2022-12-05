@@ -1,3 +1,4 @@
+import { useTheme } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Articles from "../components/Articles";
@@ -7,6 +8,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <Head>
@@ -33,7 +35,11 @@ export default function Home() {
             </a>
             .
           </span>
-          <button>Dark mode</button>
+          <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+            <option value="system">System</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
         </div>
       </main>
     </>
